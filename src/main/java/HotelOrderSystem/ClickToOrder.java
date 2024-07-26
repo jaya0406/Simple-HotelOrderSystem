@@ -4,7 +4,6 @@ import java.io.IOException;
 
 public class Invoice extends GenerateDiscount
 {
-
 	public void getInvoice() throws IOException
 	{
 		DiscountRate();
@@ -17,17 +16,17 @@ public class Invoice extends GenerateDiscount
 				{
 					if((UserItem.get(j).length())<=7)
 					{
-						System.out.println(UserItem.get(j)+"\t\t "+Qty.get(j)+"  * "+GetPrice.get(j)+"\t₹"+((Qty.get(j))*(GetPrice.get(j))));
+						System.out.println(UserItem.get(j).toUpperCase()+"\t\t  "+Qty.get(j)+"  * "+GetPrice.get(j)+"\t₹"+((Qty.get(j))*(GetPrice.get(j))));
 					}
 					
 					if((UserItem.get(j).length())>7 && (UserItem.get(j).length())<=15)
 					{
-						System.out.println(UserItem.get(j)+"\t  "+Qty.get(j)+"  * "+GetPrice.get(j)+"\t₹"+((Qty.get(j))*(GetPrice.get(j))));
+						System.out.println(UserItem.get(j).toUpperCase()+"\t  "+Qty.get(j)+"  * "+GetPrice.get(j)+"\t₹"+((Qty.get(j))*(GetPrice.get(j))));
 					}
 					
 					if((UserItem.get(j).length())>15)
 					{
-						System.out.println(UserItem.get(j)+" "+Qty.get(j)+"  * "+GetPrice.get(j)+"\t₹"+((Qty.get(j))*(GetPrice.get(j))));
+						System.out.println(UserItem.get(j).toUpperCase()+" "+Qty.get(j)+"  * "+GetPrice.get(j)+"\t₹"+((Qty.get(j))*(GetPrice.get(j))));
 					}
 					
 				}
