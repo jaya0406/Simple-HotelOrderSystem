@@ -178,23 +178,25 @@ public class OrderService extends SearchHotel {
         displayOrder();
     }
 
-	private void displayOrder() 
+		private void displayOrder() 
 	{
         System.out.println("Your Order:-");
+
+    	System.out.println("Food Items\tQty * Amt");
         for (int j = 0; j < UserItem.size(); j++) 
         {
-            if (UserItem.get(j).length() < 6) 
+            if (UserItem.get(j).length() < 7) 
             {
-                System.out.println((j + 1) + ". " + UserItem.get(j) + "\t\t" + Qty.get(j) + " *₹" + GetPrice.get(j));
+                System.out.println((j + 1) + ". " + UserItem.get(j).toUpperCase() + " \t" + Qty.get(j) + " * ₹" + GetPrice.get(j));
             }
             else
             {
-                System.out.println((j + 1) + ". " + UserItem.get(j) + "\t" + Qty.get(j) + " *₹" + GetPrice.get(j));
+                System.out.println((j + 1) + ". " + UserItem.get(j).toUpperCase() + " \t" + Qty.get(j) + " *₹" + GetPrice.get(j));
             }
             Rate = GetPrice.get(j) * Qty.get(j);
             SubTotal += Rate;
         }
-    }
+	}
 
 	public ArrayList<String> getOrderedItems()
 	{
