@@ -2,7 +2,7 @@ package HotelOrderSystem;
 
 import java.io.IOException;
 
-public class Invoice extends GenerateDiscount
+public class ClickToOrder extends GenerateDiscount
 {
 	public void getInvoice() throws IOException
 	{
@@ -49,8 +49,8 @@ public class Invoice extends GenerateDiscount
 	public static void main(String[] args) throws IOException 
 	{
 		// TODO Auto-generated method stub
-		Invoice i = new Invoice();
-		i.getInvoice();
+		ClickToOrder co= new ClickToOrder();
+		co.getInvoice();
 	}
 
 }
